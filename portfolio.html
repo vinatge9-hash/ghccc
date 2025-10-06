@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Aurum Atelier — Portfolio</title>
+  <meta name='description' content='Portfolio of premium architectural projects in noir & gold minimal luxe style.'>
+  <script src='https://cdn.tailwindcss.com'></script>
+</head>
+<body class='font-sans text-gray-900'>
+  <div id='loading-screen' class='fixed inset-0 z-50 bg-black/95 flex items-center justify-center'>
+    <div class='text-center'>
+      <div class='mb-4 grid grid-cols-3 gap-2'>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+      </div>
+      <p class='text-white text-sm tracking-wide'>Loading assets…</p>
+    </div>
+  </div>
+
+  <header class='fixed w-full z-40 bg-white/90 backdrop-blur-md border-b border-gray-200'>
+    <nav class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
+      <a href='index.html' class='text-xl font-semibold text-gray-800'>Aurum Atelier</a>
+      <div class='hidden md:flex space-x-6'>
+        <a href='index.html' class='text-gray-700 hover:text-yellow-600'>Home</a>
+        <a href='about.html' class='text-gray-700 hover:text-yellow-600'>About</a>
+        <a href='portfolio.html' class='text-gray-700 hover:text-yellow-600'>Portfolio</a>
+        <a href='services.html' class='text-gray-700 hover:text-yellow-600'>Services</a>
+        <a href='contact.html' class='text-gray-700 hover:text-yellow-600'>Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portfolio Hero -->
+    <section class='min-h-screen flex items-center justify-center relative bg-cover bg-center' style="background-image: url('https://pixabay.com/get/g0f51994f0609f65734ae2136125c28cc14b3356e2b7e1c3d5d33fd3402964b8a21483d42eacf5e7530ebdfcaf5f95087b625a54cb2825b9ce2da39a31c35fab1_640.jpg');">
+      <div class='absolute inset-0 bg-black/40'></div>
+      <div class='relative z-10 text-center max-w-2xl px-4'>
+        <h1 class='text-white text-4xl md:text-5xl font-serif'>Selected Projects</h1>
+        <p class='text-white/90 mt-2'>A curated grid of architectural experiments and built work.</p>
+      </div>
+    </section>
+
+    <!-- Masonry-like grid (responsive) -->
+    <section class='py-16'>
+      <div class='max-w-7xl mx-auto px-4'>
+        <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <figure class='relative overflow-hidden rounded-xl bg-gray-100'>
+            <img src='https://images.unsplash.com/photo-1532943162588-86a423b81a81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw1fHxwb3J0Zm9saW8lMjBidWlsZGluZyUyMDF8ZW58MHwwfHx8MTc1OTczNTMzMXww&ixlib=rb-4.1.0&q=80&w=1080' alt='Project A' class='w-full h-56 object-cover'>
+            <figcaption class='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>Project A</figcaption>
+          </figure>
+          <figure class='relative overflow-hidden rounded-xl bg-gray-100'>
+            <img src='https://images.unsplash.com/photo-1712758602405-f8aa7de86cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjBidWlsZGluZyUyMDJ8ZW58MHwwfHx8MTc1OTczNTMzMnww&ixlib=rb-4.1.0&q=80&w=1080' alt='Project B' class='w-full h-56 object-cover'>
+            <figcaption class='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>Project B</figcaption>
+          </figure>
+          <figure class='relative overflow-hidden rounded-xl bg-gray-100'>
+            <img src='https://images.pexels.com/photos/6326233/pexels-photo-6326233.jpeg?auto=compress&cs=tinysrgb&h=650&w=940' alt='Project C' class='w-full h-56 object-cover'>
+            <figcaption class='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>Project C</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener('load', () => {
+      const ls = document.getElementById('loading-screen');
+      if (ls) ls.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
