@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Aurum Atelier — About</title>
+  <meta name='description' content='About Aurum Atelier: design philosophy, process, and team.'>
+  <script src='https://cdn.tailwindcss.com'></script>
+</head>
+<body class='font-sans text-gray-900'>
+  <!-- Reuse loading screen -->
+  <div id='loading-screen' class='fixed inset-0 z-50 bg-black/95 flex items-center justify-center'>
+    <div class='text-center'>
+      <div class='mb-4 grid grid-cols-3 gap-2'>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.05s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.1s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.15s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.2s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.25s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.3s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.35s'></span>
+        <span class='w-5 h-5 bg-yellow-400 rounded-sm inline-block animate-pulse' style='animation-delay:0.4s'></span>
+      </div>
+      <p class='text-white text-sm tracking-wide'>Loading assets…</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class='fixed w-full z-40 bg-white/90 backdrop-blur-md border-b border-gray-200'>
+    <nav class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
+      <a href='index.html' class='text-xl font-semibold text-gray-800'>Aurum Atelier</a>
+      <div class='hidden md:flex space-x-6'>
+        <a href='index.html' class='text-gray-700 hover:text-yellow-600'>Home</a>
+        <a href='about.html' class='text-gray-700 hover:text-yellow-600'>About</a>
+        <a href='portfolio.html' class='text-gray-700 hover:text-yellow-600'>Portfolio</a>
+        <a href='services.html' class='text-gray-700 hover:text-yellow-600'>Services</a>
+        <a href='contact.html' class='text-gray-700 hover:text-yellow-600'>Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero - About Context -->
+    <section class='min-h-screen flex items-center justify-center relative bg-cover bg-center' style="background-image: url('https://images.pexels.com/photos/4458209/pexels-photo-4458209.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');">
+      <div class='absolute inset-0 bg-black/40'></div>
+      <div class='relative z-10 text-center max-w-3xl px-4 py-24'>
+        <h1 class='text-white text-4xl md:text-5xl font-serif'>About Aurum Atelier</h1>
+        <p class='text-white opacity-90 mt-4'>A calm, premium design practice with a minimalist, glassmorphic aesthetic. We value clarity, material honesty, and exquisite detailing.</p>
+      </div>
+    </section>
+
+    <!-- About content with parallax + fade/slide-in -->
+    <section class='py-20 bg-white'>
+      <div class='max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div class='space-y-4'>
+          <h2 class='text-2xl font-serif mb-2 reveal-on-load opacity-0 -translate-y-6'>Our Philosophy</h2>
+          <p class='opacity-0 -translate-y-6 reveal-on-load text-gray-700'>We pursue architecture that speaks with restrained luxury. Every line is intentional, every material choice measured, and every space crafted to enhance human experience.</p>
+          <p class='opacity-0 -translate-y-6 reveal-on-load text-gray-700'>Our process centers on early exploration, precise documentation, and close collaboration with clients, engineers, and artisans.</p>
+        </div>
+        <div class='grid grid-cols-2 gap-4'>
+          <img src='https://images.pexels.com/photos/974198/pexels-photo-974198.jpeg?auto=compress&cs=tinysrgb&h=650&w=940' alt='Sketch 1' class='w-full h-32 object-cover rounded'>
+          <img src='https://pixabay.com/get/gc2b579a4dfe376d3754da7663c2ad900c1b9a44647b24f42d76163a4dffa2e1d53166169405f2bb1cc6f40c3cc0e2db7_640.jpg' alt='Sketch 2' class='w-full h-32 object-cover rounded'>
+          <img src='https://images.unsplash.com/photo-1743962789547-fb1785c59367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxhcmNoaXRlY3R1cmFsJTIwc2tldGNoJTIwcGFnZSUyMDN8ZW58MHwwfHx8MTc1OTczNTMyMnww&ixlib=rb-4.1.0&q=80&w=1080' alt='Sketch 3' class='w-full h-32 object-cover rounded'>
+          <img src='https://pixabay.com/get/g0745d9a2144549554adfb606cc9895e23f6248ac728c5590a104289d10fc194cb894c9c0a6b64eacc575fad4a027895e42680d49c91540c47504a42e561515f7_640.jpg' alt='Sketch 4' class='w-full h-32 object-cover rounded'>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal-on-load');
+    reveals.forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.remove('opacity-0','-translate-y-6');
+        el.classList.add('opacity-100','translate-y-0');
+      }, i * 120);
+    });
+    window.addEventListener('load', () => {
+      const ls = document.getElementById('loading-screen');
+      if (ls) ls.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
